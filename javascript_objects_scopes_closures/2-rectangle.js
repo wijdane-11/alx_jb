@@ -1,20 +1,17 @@
-Correct output - Instance width: 3 - height: -3
+#!/usr/bin/node
 
-main_1.js
-
- - [Got]
-Rectangle { width: undefined, height: undefined }
-undefined
-undefined
-
-(70 chars long)
-[stderr]: 
-(0 chars long)
-[Expected]
-Rectangle { width: undefined, height: undefined }
-undefined
-undefined
-
-(33 chars long)
-[stderr]: [Anything]
-(0 chars long)
+class Rectangle {
+    constructor(w, h) {
+      if (w > 0 && h > 0) {
+        this.width = w;
+        this.height = h;
+      } else {
+        // Create an empty object
+        this.width = undefined;
+        this.height = undefined;
+      }
+    }
+  }
+  
+  module.exports = Rectangle;
+  
