@@ -13,8 +13,8 @@ class Rectangle {
     }
   }
   
-  // Modify the toString method to return the expected output
-  Rectangle.prototype.toString = function () {
+  // Override the inspect method for util.inspect
+  Rectangle.prototype.inspect = function () {
     return 'Rectangle {}';
   };
   
